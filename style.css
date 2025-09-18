@@ -143,4 +143,32 @@ nav a.active::after {
   background: #007bff; 
   border-radius: 2px;
 }
+/* Линии по бокам от кнопки "Показать ещё" */
+.divider{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:10px 0 6px; /* как на макете */
+}
 
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:#dfe7ee;      /* цвет линии = цвет бордеров карточек */
+  border-radius:1px;
+}
+
+/* Кнопка в виде небольшой "таблетки". Если у тебя уже есть .chip — ок,
+   класс ниже лишь уточняет отступы под центр. */
+.divider__btn{
+  padding:6px 12px;
+  font-size:13px;
+  line-height:1;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
